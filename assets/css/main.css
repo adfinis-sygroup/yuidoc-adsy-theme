@@ -34,14 +34,16 @@ a:hover {
 }
 
 .method,
-.property {
+.property,
+.event {
   border-bottom: 1px solid #e1e1e1;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 }
 
 .method .title,
-.property .title {
+.property .title,
+.event .title {
   display: inline-block;
 }
 
