@@ -8,11 +8,13 @@ our company CSS framework ([AdCSSy](https://adfinis-sygroup.github.io/adcssy)).
 * No elements
 * No attributes
 * Can't remember access options after page refresh
-* External descriptions are not rendered properly (bug in YUIDoc)
+* Descriptions from external sources are not rendered properly (bug in YUIDoc)
 
 ## Installation
 Install yuidoc-adsy-theme from npm:
-`npm install yuidoc-adsy-theme`
+```bash
+npm install yuidoc-adsy-theme
+```
 Adjust your options in `yuidoc.json` to:
 
 ```json
@@ -30,4 +32,4 @@ Adjust your options in `yuidoc.json` to:
 You can build the example documentation with `npm test` or watch it with `npm start`.
 
 ## License
-BSD see (LICENSE)[LICENSE]
+MIT see [LICENSE](LICENSE).
