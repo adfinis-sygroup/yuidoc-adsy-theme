@@ -4,7 +4,11 @@
     src="{{#if projectLogo}}{{projectLogo}}{{else}}{{projectAssets}}/vendor/pictures/logo/adsy.png{{/if}}"
     alt="{{projectName}}"
     title="{{projectName}}">
-  <h1>{{projectName}}</h1>
+  {{#if projectUrl}}
+    <h1><a target="_blank" href="{{projectUrl}}">{{projectName}}</a></h1>
+  {{else}}
+    <h1>{{projectName}}</h1>
+  {{/if}}
   <h4>Version {{projectVersion}}</h4>
   <div style="color:darkgrey;margin-bottom:10px;">API Documentation</div>
   <div>{{projectDescription}}</div>

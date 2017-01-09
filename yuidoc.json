@@ -2,6 +2,7 @@
   "name": "yuidoc-adsy-theme",
   "description": "A yuidoc theme considering our company standards.",
   "version": "1.1.0",
+  "url": "https://github.com/adfinis-sygroup/yuidoc-adsy-theme",
   "options": {
     "paths": [
       "examples"
