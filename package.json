@@ -1,0 +1,26 @@
+{
+  "name": "yuidoc-adsy-theme",
+  "version": "0.0.0",
+  "description": "A yuidoc theme considering our company styles",
+  "scripts": {
+    "start": "gulp serve",
+    "test": "gulp docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adfinis-sygroup/yuidoc-adsy-theme.git"
+  },
+  "keywords": [
+    "yuidoc",
+    "adsy",
+    "theme"
+  ],
+  "author": "Jonas Metzener <jonas.metzener@adfinis-sygroup.ch>",
+  "license": "BSD",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "shelljs": "^0.7.6"
+  }
+}

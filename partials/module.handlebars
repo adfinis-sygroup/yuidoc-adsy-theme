@@ -1,0 +1,62 @@
+<h1>{{name}} Module</h1>
+<div>
+  {{#if foundAt}}
+    <div>
+      <strong>Defined in:</strong> <a href="{{foundAt}}">{{{file}}}:{{{line}}}</a>
+    </div>
+  {{/if}}
+
+  {{#if since}}
+    <div>Available since {{since}}</div>
+  {{/if}}
+</div>
+
+{{#if deprecated}}
+  <div class="alert alert-danger">
+    {{#if deprecationMessage}}
+      <strong>Deprecated:</strong> {{deprecationMessage}}
+    {{else}}
+      This module is deprecated.
+    {{/if}}
+  </div>
+{{else}}
+  <br>
+{{/if}}
+
+<div class="grid grid--4of12">
+  {{#if moduleClasses}}
+    <div class="grid-cell">
+      <p>This module provides the following classes:</p>
+
+      <ul>
+        {{#moduleClasses}}
+          <li><a href="{{../projectRoot}}classes/{{name}}.html">{{displayName}}</a></li>
+        {{/moduleClasses}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if moduleElements}}
+    <div class="grid-cell">
+      <p>This module provides the following elements:</p>
+
+      <ul>
+        {{#moduleElements}}
+          <li><a href="{{../projectRoot}}elements/{{name}}.html">&lt;{{displayName}}&gt;</a></li>
+        {{/moduleElements}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if subModules}}
+    <div class="grid-cell">
+      <p>This module is a rollup of the following modules:</p>
+
+      <ul>
+        {{#subModules}}
+          <li><a href="{{../projectRoot}}modules/{{name}}.html">{{displayName}}</a></li>
+        {{/subModules}}
+      </ul>
+    </div>
+  {{/if}}
+</div>

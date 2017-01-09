@@ -1,0 +1,19 @@
+<input id="search" placeholder="Search...">
+
+{{#if classes}}
+  <ul class="nav-side-list">
+    <li class="nav-side-list-header">Classes</li>
+    {{#classes}}
+      <li class="nav-side-list-item"><a href="{{../projectRoot}}classes/{{name}}.html">{{displayName}}</a></li>
+    {{/classes}}
+  </ul>
+{{/if}}
+
+{{#if allModules}}
+  <ul class="nav-side-list">
+    <li class="nav-side-list-header">Modules</li>
+    {{#allModules}}
+      <li class="nav-side-list-item"><a href="{{../projectRoot}}modules/{{name}}.html">{{displayName}}</a></li>
+    {{/allModules}}
+  </ul>
+{{/if}}

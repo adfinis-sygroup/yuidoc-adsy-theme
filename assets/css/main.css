@@ -1,0 +1,100 @@
+#options {
+  position: static;
+  padding: 1rem 0;
+}
+
+#options .checkbox {
+  margin: 0 10px;
+}
+
+.page-content ul:not(.nav-tabs) {
+  margin-left: 25px;
+}
+
+pre * {
+  margin: 0;
+  padding: 0;
+}
+
+.meta {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.flag {
+  background-color: rgb(150, 150, 150);
+  color: white;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+
+.type,
+a:hover {
+  border-bottom: 1px dotted darkgrey;
+}
+
+.method,
+.property {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.method .title,
+.property .title {
+  display: inline-block;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: #e1e1e1;
+  margin: 0;
+}
+
+.params > .param::before {
+  content: ', ';
+}
+
+.params > .param:first-child::before {
+  content: '';
+}
+
+.pad-left {
+  padding-left: 1rem;
+}
+
+.param-list {
+  margin-left: 0 !important;
+  list-style: none;
+}
+
+.nav-side a:hover {
+  border-bottom: none;
+}
+
+.inherited,
+.private,
+.protected,
+.deprecated {
+  height: auto;
+  overflow: visible;
+}
+
+.hide-inherited .inherited   { height: 0; overflow: hidden; padding: 0; margin: 0; border: none; }
+.hide-private .private       { height: 0; overflow: hidden; padding: 0; margin: 0; border: none; }
+.hide-protected .protected   { height: 0; overflow: hidden; padding: 0; margin: 0; border: none; }
+.hide-deprecated .deprecated { height: 0; overflow: hidden; padding: 0; margin: 0; border: none; }
+
+#search {
+  display: block;
+  margin-left: 1rem;
+  width: calc(100% - 2rem);
+  padding: 5px 0;
+  border: none;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: transparent;
+  outline: none;
+  font-size: 15.3px;
+}

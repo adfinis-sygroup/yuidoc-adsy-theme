@@ -1,0 +1,124 @@
+<h1>{{name}} Class</h1>
+<div>
+  <div class="grid">
+    <div class="grid-cell">
+      {{#if uses}}
+        <div>
+          <strong>Uses:</strong>
+          {{#uses}}
+            <a href="{{.}}.html">{{.}}</a>
+          {{/uses}}
+        </div>
+      {{/if}}
+
+      {{#if extends}}
+        <div><strong>Extends:</strong> {{#crossLink extends}}{{/crossLink}}</div>
+      {{/if}}
+
+      {{#if foundAt}}
+        <div><strong>Defined in:</strong> <a href="{{foundAt}}">{{{file}}}:{{{line}}}</a></div>
+      {{/if}}
+    </div>
+
+    <div class="grid-cell">
+      {{#if module}}
+        <div>
+          {{#if submodule}}
+            <strong>Module:</strong> {{#crossLinkModule submodule}}{{/crossLinkModule}}<br>
+            <strong>Parent Module:</strong> {{#crossLinkModule module}}{{/crossLinkModule}}
+          {{else}}
+            <strong>Module:</strong> {{#crossLinkModule module}}{{/crossLinkModule}}
+          {{/if}}
+        </div>
+      {{/if}}
+    </div>
+
+    <div class="grid-cell">
+      {{#if since}}
+        Available since {{since}}</p>
+      {{/if}}
+    </div>
+  </div>
+</div>
+
+{{#if deprecated}}
+  <div class="alert alert-danger">
+    {{#if deprecationMessage}}
+      <strong>Deprecated:</strong> {{deprecationMessage}}
+    {{else}}
+      This class is deprecated.
+    {{/if}}
+  </div>
+{{/if}}
+
+<div>{{{classDescription}}}</div>
+
+<div class="tabs-container">
+  <div>
+    <ul class="nav nav-tabs">
+      <li><a class="active" href="#index">Index</a></li>
+      <li><a href="#methods">Methods</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#events">Events</a></li>
+    </ul>
+  </div>
+
+  <div class="tabs-options">
+    {{>options}}
+  </div>
+
+  <div class="tab-content tab-content--scroll">
+    <div class="tab-pane active" id="index">
+      <h2>Index</h2>
+      <div class="grid grid--4of12">
+        <div class="grid-cell">
+          <h4>Methods</h4>
+          <ul>
+            {{#methods}}
+              <li class="{{#if access}}{{access}}{{/if}} {{#if extended_from}}inherited{{/if}} {{#if deprecated}}deprecated{{/if}}"><a href="#method_{{name}}">{{name}}</a></li>
+            {{/methods}}
+          </ul>
+        </div>
+
+        <div class="grid-cell">
+          <h4>Properties</h4>
+          <ul>
+            {{#properties}}
+              <li class="{{#if access}}{{access}}{{/if}} {{#if extended_from}}inherited{{/if}} {{#if deprecated}}deprecated{{/if}}"><a href="#prop_{{name}}">{{name}}</a></li>
+            {{/properties}}
+          </ul>
+        </div>
+
+        <div class="grid-cell">
+          <h4>Events</h4>
+          <ul>
+            {{#events}}
+              <li class="{{#if access}}{{access}}{{/if}} {{#if extended_from}}inherited{{/if}} {{#if deprecated}}deprecated{{/if}}"><a href="#event_{{name}}">{{name}}</a></li>
+            {{/events}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="methods">
+      <h2>Methods</h2>
+      {{#methods}}
+{{>method}}
+      {{/methods}}
+    </div>
+
+    <div class="tab-pane" id="properties">
+      <h2>Properties</h2>
+      {{#properties}}
+{{>props}}
+      {{/properties}}
+    </div>
+
+    <div class="tab-pane" id="events">
+      <h2>Events</h2>
+      {{#events}}
+{{>events}}
+      {{/events}}
+    </div>
+  </div>
+</div>
