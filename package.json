@@ -1,6 +1,6 @@
 {
   "name": "yuidoc-adsy-theme",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A yuidoc theme considering our company styles",
   "scripts": {
     "start": "gulp serve",
