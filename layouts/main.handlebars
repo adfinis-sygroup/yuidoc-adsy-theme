@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{{projectAssets}}/vendor/adcssy/adcssy.min.css">
     <link rel="stylesheet" href="{{projectAssets}}/vendor/highlight/styles/default.css">
     <link rel="stylesheet" href="{{projectAssets}}/css/main.css" id="site_styles">
-    <link rel="icon" href="{{projectAssets}}/favicon.ico">
     <script src="{{yuiSeedUrl}}"></script>
   </head>
   <body>
@@ -20,7 +19,7 @@
               <span class="nav-toggle-icon"></span>
             </button>
             <a href="#">
-              <div class="nav-side-header-logo"></div>
+              <div class="nav-side-header-logo" style="{{#if projectLogo}}background-image:url({{projectLogo}}){{/if}}"></div>
               <div class="nav-side-header-title">{{projectName}} {{projectVersion}}</div>
             </a>
           </header>
